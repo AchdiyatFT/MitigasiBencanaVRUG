@@ -30,14 +30,15 @@ public class OpenDoor : MonoBehaviour
         Debug.Log("Tertutup");
     }
     // Update is called once per frame
-//    void Update()
-//    {
-//        if (!isLocked)
-//        {
-//            animator.SetBool("Open", true);
-//        } else if (isLocked)
-//        {
-//            animator.SetBool("Open", false);
-//        }
-//    }
+    void Update()
+    {
+        if (!isLocked)
+        {
+            animator.SetBool("Open", true);
+        }
+        else if (isLocked)
+        {
+            animator.SetBool("Open", false);
+        }
+    }
 }
