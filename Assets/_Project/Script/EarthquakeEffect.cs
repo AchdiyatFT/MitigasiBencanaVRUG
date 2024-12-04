@@ -1,10 +1,12 @@
 using System.Collections;
+using UnityEditor.Build.Content;
 using UnityEngine;
 
 public class EarthquakeEffect : MonoBehaviour
 {
-    public float duration = 1.0f; // Durasi gempa
-    public float magnitude = 0.1f; // Intensitas gempa
+    [SerializeField] GameManager gameManager;
+    //public float duration = 1.0f; // Durasi gempa
+    //public float magnitude = 0.1f; // Intensitas gempa
 
     private Vector3 originalPosition;
 
@@ -22,21 +24,19 @@ public class EarthquakeEffect : MonoBehaviour
 
     private IEnumerator Shake()
     {
-        float elapsedTime = 0f;
+        //float elapsedTime = 0f;
 
-        while (elapsedTime < duration)
+        while (gameManager.Camera_Earthquake_shake >= 0)
         {
             // Buat pergeseran posisi acak
-            float offsetX = Random.Range(-magnitude, magnitude);
-            float offsetZ = Random.Range(-magnitude, magnitude); // Biasanya lebih baik hindari Y untuk VR
+            float offsetX = Random.Range(-gameManager.Camera_Earthquake_shake, gameManager.Camera_Earthquake_shake);
+            float offsetZ = Random.Range(-gameManager.Camera_Earthquake_shake, gameManager.Camera_Earthquake_shake); // Biasanya lebih baik hindari Y untuk VR
 
             transform.localPosition = new Vector3(
                 originalPosition.x + offsetX,
                 originalPosition.y, // Jangan ganggu tinggi (Y-axis) untuk menghindari ketidaknyamanan
                 originalPosition.z + offsetZ
             );
-
-            elapsedTime += Time.deltaTime;
 
             yield return null; // Tunggu frame berikutnya
         }
