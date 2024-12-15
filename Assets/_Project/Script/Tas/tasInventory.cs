@@ -24,7 +24,7 @@ public class tasInventory : MonoBehaviour
     public GameObject fullBagModel3;    // Full bag model (Model 3)
     public GameObject socketedBagModel4;
 
-    [SerializeField] GameManager_Scene1 gameManager;
+    [SerializeField] GameManager_DalamRumah gameManager;
 
     private enum BagState
     {
