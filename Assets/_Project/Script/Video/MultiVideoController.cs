@@ -8,10 +8,10 @@ public class MultiVideoController : MonoBehaviour
     public VideoClip video1;        // Video pertama
     public VideoClip video2;        // Video kedua
 
-    public GameObject button1;      // Objek tombol untuk video 1
-    public GameObject button2;      // Objek tombol untuk video 2
-    public GameObject button3;      // Objek tombol untuk scene 1
-    public GameObject button4;      // Objek tombol untuk scene 2
+    public GameObject button1;      
+    public GameObject button2;      
+    public GameObject button3;      
+    public GameObject button4;      
 
     private void Start()
     {

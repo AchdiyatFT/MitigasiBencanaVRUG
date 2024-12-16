@@ -211,7 +211,7 @@ public class tasInventory : MonoBehaviour
 
     void Update()
     {
-        Debug.Log($"Current State: {currentState}");
+        //Debug.Log($"Current State: {currentState}");
 
         if (items.Count >= maxCapacity && currentState != BagState.Full)
         {
