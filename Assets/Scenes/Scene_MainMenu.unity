@@ -525,6 +525,7 @@ GameObject:
   m_Component:
   - component: {fileID: 486999752}
   - component: {fileID: 486999751}
+  - component: {fileID: 486999753}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -612,6 +613,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &486999753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 486999750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
 --- !u!1001 &508115991
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1134,6 +1158,9 @@ MonoBehaviour:
   objekUntukDiubah:
   - {fileID: 1434330772}
   - {fileID: 1434330771}
+  cameraRig: {fileID: 1434330778}
+  adultHeight: 1.7
+  childHeight: 1.4
 --- !u!4 &639544869 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4002255338982288694, guid: 4d1e01b04cc8b4b4098955bd7edb868c, type: 3}
@@ -1944,6 +1971,11 @@ GameObject:
 --- !u!1 &1434330772 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4034773126723430798, guid: 4d1e01b04cc8b4b4098955bd7edb868c, type: 3}
+  m_PrefabInstance: {fileID: 1434330769}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1434330778 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4002255339059441943, guid: 4d1e01b04cc8b4b4098955bd7edb868c, type: 3}
   m_PrefabInstance: {fileID: 1434330769}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1586603293
