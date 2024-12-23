@@ -6529,7 +6529,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21522324354205f47b7da844c4479596, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 0}
+  gameManager: {fileID: 549951458}
 --- !u!43 &2083169202
 Mesh:
   m_ObjectHideFlags: 0
@@ -6815,7 +6815,7 @@ PrefabInstance:
       objectReference: {fileID: 549951458}
     - target: {fileID: 3477097507396085595, guid: 58d8344be49f3aa46b72d6f33709e988, type: 3}
       propertyPath: maxCapacity
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3477097507396085595, guid: 58d8344be49f3aa46b72d6f33709e988, type: 3}
       propertyPath: socketInteractor
@@ -6823,7 +6823,7 @@ PrefabInstance:
       objectReference: {fileID: 1395296076}
     - target: {fileID: 3477097507396085595, guid: 58d8344be49f3aa46b72d6f33709e988, type: 3}
       propertyPath: requiredImportantItems
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3479390903917448034, guid: 58d8344be49f3aa46b72d6f33709e988, type: 3}
       propertyPath: m_LocalPosition.y

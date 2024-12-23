@@ -92,6 +92,7 @@ public class GameManager_DalamRumah : MonoBehaviour
         canTimeDecrease = false;
         GameStart = false;
         Debug.Log("Jumlah barang yang benar = " + BarangBenar);
+        Debug.Log("GAME SELESAI");
 
     }
 }
