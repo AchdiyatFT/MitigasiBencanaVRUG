@@ -73,7 +73,6 @@ public class Crouch : MonoBehaviour
 
         // Sesuaikan tinggi kamera dan karakter berdasarkan status crouch
         UpdateCrouchState(isCrouching);
-        UpdateHeight();
     }
 
     private void UpdateCrouchState(bool isCrouching)
