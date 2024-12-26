@@ -25,12 +25,12 @@ public class Crouch : MonoBehaviour
     [SerializeField]
     private XRInputValueReader<float> rightCrouchInput; // Input for right crouch button
 
-    private void Start()
+
+    private void Awake()
     {
         // Check PlayerPrefs to determine if the player is an adult or child
-        int playerAgeCategory = PlayerPrefs.GetInt("PlayerAgeCategory", 0);  // Default to 0 (adult) if not set
-
-        if (playerAgeCategory == 1) // 1 represents child in this example
+        //int playerAgeCategory = PlayerPrefs.GetInt("PlayerAgeCategory", 0);  // Default to 0 (adult) if not set
+        if (GameManager_Posko.usia == 2) // 1 represents child in this example
         {
             // Adjust the crouch and standing heights for a child
             crouchHeight = 0.5f;
@@ -45,6 +45,7 @@ public class Crouch : MonoBehaviour
 
         // Optionally, print the values for debugging
         Debug.Log($"Crouch Height: {crouchHeight}, Standing Height: {standingHeight}");
+
     }
 
     private void OnEnable()
@@ -72,6 +73,7 @@ public class Crouch : MonoBehaviour
 
         // Sesuaikan tinggi kamera dan karakter berdasarkan status crouch
         UpdateCrouchState(isCrouching);
+        UpdateHeight();
     }
 
     private void UpdateCrouchState(bool isCrouching)
@@ -109,4 +111,5 @@ public class Crouch : MonoBehaviour
             characterController.center = center;
         }
     }
+
 }

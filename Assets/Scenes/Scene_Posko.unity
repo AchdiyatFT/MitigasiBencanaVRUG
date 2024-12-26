@@ -2017,7 +2017,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2332223130766944328, guid: 4d1e01b04cc8b4b4098955bd7edb868c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1434330776}
   m_SourcePrefab: {fileID: 100100000, guid: 4d1e01b04cc8b4b4098955bd7edb868c, type: 3}
 --- !u!1 &1434330770 stripped
 GameObject:
@@ -2034,6 +2037,71 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2332223130766944331, guid: 4d1e01b04cc8b4b4098955bd7edb868c, type: 3}
   m_PrefabInstance: {fileID: 1434330769}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1434330773 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2332223130766944328, guid: 4d1e01b04cc8b4b4098955bd7edb868c, type: 3}
+  m_PrefabInstance: {fileID: 1434330769}
+  m_PrefabAsset: {fileID: 0}
+--- !u!143 &1434330774 stripped
+CharacterController:
+  m_CorrespondingSourceObject: {fileID: 7058819559192095487, guid: 4d1e01b04cc8b4b4098955bd7edb868c, type: 3}
+  m_PrefabInstance: {fileID: 1434330769}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1434330775 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2869134442127714761, guid: 4d1e01b04cc8b4b4098955bd7edb868c, type: 3}
+  m_PrefabInstance: {fileID: 1434330769}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1434330773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0cb9aa70a22847b5925ee5f067c10a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1434330776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1434330773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cb5d6393aca5144ea271d8aae86ba31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xrOrigin: {fileID: 1434330775}
+  characterController: {fileID: 1434330774}
+  crouchHeight: 0.7
+  standingHeight: 1.4
+  leftCrouchInput:
+    m_InputSourceMode: 2
+    m_InputAction:
+      m_Name: 
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 00f2fbc5-3354-4fe9-a20f-5319bc667840
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_InputActionReference: {fileID: 0}
+    m_ObjectReferenceObject: {fileID: 0}
+    m_ManualValue: 0
+  rightCrouchInput:
+    m_InputSourceMode: 2
+    m_InputAction:
+      m_Name: 
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 34c51e04-4337-4ec8-9fb2-9ecb0f04a4c5
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_InputActionReference: {fileID: 0}
+    m_ObjectReferenceObject: {fileID: 0}
+    m_ManualValue: 0
 --- !u!1001 &1437769206
 PrefabInstance:
   m_ObjectHideFlags: 0
