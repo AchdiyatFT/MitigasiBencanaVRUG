@@ -9,9 +9,22 @@ public class GameManager_Posko : MonoBehaviour
     [SerializeField] Material materialAnak2;
     [SerializeField] GameObject[] objekUntukDiubah;
 
+    public Transform cameraRig; // XR Origin atau XR Rig
+    public float adultHeight = 1.7f; // Tinggi dewasa
+    public float childHeight = 1.4f;
     private void Start()
     {
         GantiMaterialTangan();
+        if (usia == 1) 
+        {
+            //SetCameraHeight(true);
+            GantiMaterialTangan();
+        }
+        else
+        {
+            GantiMaterialTangan();
+            //SetCameraHeight(false);
+        }
     }
     // SCENE MAIN MENU
     public void PilihDewasa()
@@ -19,6 +32,7 @@ public class GameManager_Posko : MonoBehaviour
         usia = 1;
         LoadScene_posko();
         GantiMaterialTangan();
+        SetCameraHeight(true);
     }
 
     public void PilihAnak2()
@@ -26,8 +40,15 @@ public class GameManager_Posko : MonoBehaviour
         usia = 2;
         LoadScene_posko();
         GantiMaterialTangan();
+        SetCameraHeight(false);
     }
-
+    public void SetCameraHeight(bool isAdult)
+    {
+        float targetHeight = isAdult ? adultHeight : childHeight;
+        Vector3 newPosition = cameraRig.position;
+        newPosition.y = targetHeight;
+        cameraRig.position = newPosition;
+    }
     void LoadScene_posko()
     {
         SceneManager.LoadScene("Scene_Posko");
