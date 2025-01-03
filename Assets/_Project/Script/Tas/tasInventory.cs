@@ -10,6 +10,7 @@ public class tasInventory : MonoBehaviour
     public int maxCapacity = 10;
     public int requiredImportantItems = 3;
     private bool isReadyToBeCarried = false;
+    [SerializeField] GameManager_DalamRumah gameManager;
 
     public Collider bagCollider;
     public XRGrabInteractable grabInteractable;
@@ -24,7 +25,6 @@ public class tasInventory : MonoBehaviour
     public GameObject fullBagModel3;    // Full bag model (Model 3)
     public GameObject socketedBagModel4;
 
-    [SerializeField] GameManager_DalamRumah gameManager;
 
     private enum BagState
     {
@@ -72,10 +72,26 @@ public class tasInventory : MonoBehaviour
 
             CheckIfReadyToCarry();
             UpdateBagAppearance(); // Update appearance
+            CountImportantItems();
             return true;
         }
         Debug.Log("Tas penuh, tidak bisa menambahkan barang.");
         return false;
+    }
+    public int CountImportantItems()
+    {
+        int importantItemCount = 0;
+
+        foreach (var item in items)
+        {
+            if (item.isImportant)
+            {
+                importantItemCount++;
+            }
+        }
+
+        gameManager.BarangBenar = importantItemCount;
+        return importantItemCount;
     }
 
     private void CheckIfReadyToCarry()
@@ -88,6 +104,7 @@ public class tasInventory : MonoBehaviour
             if (grabInteractable != null)
             {
                 grabInteractable.enabled = true;
+                gameManager.EnablePintuKeluar();
             }
         }
     }
