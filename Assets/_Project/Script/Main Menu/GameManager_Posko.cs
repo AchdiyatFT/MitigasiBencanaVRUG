@@ -30,7 +30,7 @@ public class GameManager_Posko : MonoBehaviour
     public void PilihDewasa()
     {
         usia = 1;
-        //LoadScene_posko();
+        LoadScene_posko();
         GantiMaterialTangan();
         SetCameraHeight(true);
     }
@@ -38,7 +38,7 @@ public class GameManager_Posko : MonoBehaviour
     public void PilihAnak2()
     {
         usia = 2;
-        //LoadScene_posko();
+        LoadScene_posko();
         GantiMaterialTangan();
         SetCameraHeight(false);
     }

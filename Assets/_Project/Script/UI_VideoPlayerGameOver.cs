@@ -15,25 +15,25 @@ public class UI_VideoPlayerGameOver : MonoBehaviour
 
     void Start()
     {
-        // Assign button listeners
+        
         startButton.onClick.AddListener(StartVideo);
         pauseButton.onClick.AddListener(PauseVideo);
 
-        // Set slider values
+        
         timeSlider.minValue = 0;
-        timeSlider.maxValue = 1; // Will adjust later based on video duration
+        timeSlider.maxValue = 1; 
 
-        // Add listener for slider drag
+        
         timeSlider.onValueChanged.AddListener(OnSliderValueChanged);
 
-        // Update duration text
+        
         videoPlayer.prepareCompleted += OnVideoPrepared;
         videoPlayer.Prepare();
     }
 
     void Update()
     {
-        // Update slider and time text if video is playing and not being dragged
+        
         if (videoPlayer.isPlaying && !isDragging)
         {
             timeSlider.value = (float)(videoPlayer.time / videoPlayer.length);
