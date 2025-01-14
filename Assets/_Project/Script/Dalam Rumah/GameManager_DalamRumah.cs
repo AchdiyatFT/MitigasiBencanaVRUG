@@ -129,8 +129,8 @@ public class GameManager_DalamRumah : MonoBehaviour
 
     public void ShowGameOver()
     {
-        UI_VideoPlayer.SetActive(true);
-        UI_Gameover.SetActive(false);
+        UI_VideoPlayer.SetActive(false );
+        UI_Gameover.SetActive(true);
     }
 
     public void RestartScene()
