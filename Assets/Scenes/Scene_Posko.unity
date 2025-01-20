@@ -801,6 +801,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 412007575}
   m_CullTransparentMesh: 1
+--- !u!4 &463595683 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4002255338982288694, guid: 4d1e01b04cc8b4b4098955bd7edb868c, type: 3}
+  m_PrefabInstance: {fileID: 1434330769}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &486999750
 GameObject:
   m_ObjectHideFlags: 0
@@ -2191,9 +2196,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   xrOrigin: {fileID: 1434330775}
+  cameraOffset: {fileID: 463595683}
   characterController: {fileID: 1434330774}
-  crouchHeight: 0.7
-  standingHeight: 1.4
+  crouchValueDewasa: 1
+  standingValueDewasa: 1.4
+  crouchValueAnak: 0.8
+  standingValueAnak: 1.2
   leftCrouchInput:
     m_InputSourceMode: 2
     m_InputAction:
@@ -2205,7 +2213,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_InputActionReference: {fileID: 0}
+    m_InputActionReference: {fileID: -8704738933421071977, guid: c348712bda248c246b8c49b3db54643f, type: 3}
     m_ObjectReferenceObject: {fileID: 0}
     m_ManualValue: 0
   rightCrouchInput:
@@ -2219,7 +2227,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_InputActionReference: {fileID: 0}
+    m_InputActionReference: {fileID: -5601846425325604014, guid: c348712bda248c246b8c49b3db54643f, type: 3}
     m_ObjectReferenceObject: {fileID: 0}
     m_ManualValue: 0
 --- !u!1001 &1437769206
